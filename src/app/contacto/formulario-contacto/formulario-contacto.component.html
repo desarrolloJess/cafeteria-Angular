@@ -1,0 +1,82 @@
+<div id="contenedor">
+
+    <div class="tituloArea">
+        <h3>Contactanos!</h3>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <form (submit)="enviarMensaje()">
+
+                <!-- Nombre y Apellido -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-person-vcard"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Ingresa tu nombre" name="Nombre" [(ngModel)]="mensaje.nombre" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ingresa tu apellido" name="Apellidp" [(ngModel)]="mensaje.apellido" required>
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Correo Electrónico y Asunto -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-envelope-fill"></i>
+                        </span>
+                        <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" name="CorreoElectronico" [(ngModel)]="mensaje.correo" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-card-text"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Ingresa el asunto" name="Asunto" [(ngModel)]="mensaje.asunto" required />
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Mensaje -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-chat-right-dots"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Ingresa el mensaje" name="Mensaje" [(ngModel)]="mensaje.mensaje" required />
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Botón Enviar -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <input type="submit" class="btn btn-primary" value="Enviar" id="Enviar" disabled>
+                    </div>
+                </div>
+              
+            </form>
+              
+    
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Oficinas</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">El mejor café, cultivado de manera ética</h6>
+                    <p class="card-text">Dirección: Av. Paseo del Centenario 401, Colinas de San Javier, 44510 Guadalajara, Jal., México</p>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+</div>

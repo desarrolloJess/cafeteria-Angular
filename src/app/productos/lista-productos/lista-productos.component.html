@@ -1,0 +1,53 @@
+<div id="contenedorProductos">
+    <div class="tituloArea">
+        <h3>Nuestros Productos</h3>
+    </div>
+
+
+    
+    <div class="campoBusqueda">
+        <!-- Campo de búsqueda -->
+        <input type="text" class="form-control mb-3" placeholder="Buscar por nombre"  name="filtroNombre"
+         [(ngModel)]="filtroNombre" (input)="buscarProductos(filtroNombre)">
+    </div>
+    
+
+    <div class="areaCategoria">
+        <div class="row">
+          <div class="col" *ngFor="let categoria of lstCategorias">
+            <label class="checkbox-inline">
+              <input type="checkbox" (change)="buscarPorCategoria(categoria.id)">
+              {{ categoria.nombre }}
+            </label>                
+          </div>            
+        </div>
+    </div>
+      
+      
+      
+    <div class="lstProductos">
+        <div *ngIf="lstProductos.length > 0">
+    
+            <div class="row">
+            <div class="col-md-3 mb-1" *ngFor="let producto of lstProductosFiltrados">
+                <div class="card" style="height: 400px;">
+                <img [src]="producto.imagen" class="card-img-top" height="200px">
+                <div class="card-body">
+                    <b class="card-title">{{ producto.nombre }}</b>
+                    <p>{{producto.categoria}}</p>
+                    <p>${{producto.precio}}</p>
+
+                    <small>{{producto.descripcion}}</small>
+                </div>
+                </div>
+            </div>
+            </div>      
+        </div>
+    
+        <div *ngIf="lstProductos.length <= 0">
+            <p>No hay productos disponibles.</p>
+        </div>
+    </div>
+    
+
+</div>

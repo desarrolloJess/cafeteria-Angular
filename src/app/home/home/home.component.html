@@ -1,0 +1,32 @@
+<div id="container">
+    <div class="row">
+        <div id="banner">
+            <h1>Inspiración diaria, en cada sorbo</h1> 
+            <h3 id="colores">Colores que alimentan</h3>
+        </div>
+        <div class="col">
+            <div class="lstProductos">
+                <div *ngIf="lstProductos.length > 0">
+            
+                    <div class="row">
+                    <div class="col-md-3 mb-1" *ngFor="let producto of lstProductos">
+                        <div class="card" style="height: 350px;">
+                        <img [src]="producto.imagen" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <b class="card-title">{{ producto.nombre }}</b>
+                            <p>{{producto.categoria}}</p>
+                            <p>{{producto.precio}}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>      
+                </div>
+            
+                <div *ngIf="lstProductos.length <= 0">
+                    <p>No hay productos disponibles.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

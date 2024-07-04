@@ -1,0 +1,21 @@
+#contenedorProductos{
+    padding: 2%;
+}
+.tituloArea{
+    padding: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: rgb(228, 208, 184);
+}
+.campoBusqueda{
+    padding: 1%;
+}
+.lstProductos{
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+}
+.areaCategoria{
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
